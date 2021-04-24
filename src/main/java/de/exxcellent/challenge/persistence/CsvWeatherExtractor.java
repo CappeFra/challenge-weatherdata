@@ -11,12 +11,14 @@ import java.util.stream.Collectors;
 
 public class CsvWeatherExtractor extends CsvExtractor implements WeatherDataExtractor {
 
-    public WeatherData extractWeatherData() throws IOException, CsvException {
-        return extractWeatherData("weather.csv");
+    String filename;
+
+    public CsvWeatherExtractor(String filename) {
+        this.filename = filename;
     }
 
     @Override
-    public WeatherData extractWeatherData(String filename) throws IOException, CsvException {
+    public WeatherData extractWeatherData() throws IOException, CsvException {
         List<String[]> dataRows = getCsvDataRows(filename);
         String[] entryMapping = dataRows.get(0);
         int[] entryMappingIndexes = {

@@ -4,9 +4,9 @@ import de.exxcellent.challenge.domain_model.MinMaxEntry;
 
 public class WeatherEntry implements MinMaxEntry {
     private final int day;
-    private final int maxTemperature;
-    private final int minTemperature;
-    private final int avgTemperature;
+    private final double maxTemperature;
+    private final double minTemperature;
+    private final double avgTemperature;
     // [...]
 
     public WeatherEntry(int day, int maxTemperature, int minTemperature, int avgTemperature) {
@@ -20,15 +20,15 @@ public class WeatherEntry implements MinMaxEntry {
         return day;
     }
 
-    public int getMaxTemperature() {
+    public double getMaxTemperature() {
         return maxTemperature;
     }
 
-    public int getMinTemperature() {
+    public double getMinTemperature() {
         return minTemperature;
     }
 
-    public int getAvgTemperature() {
+    public double getAvgTemperature() {
         return avgTemperature;
     }
 

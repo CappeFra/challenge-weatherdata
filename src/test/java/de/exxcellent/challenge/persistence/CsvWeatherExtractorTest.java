@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CsvWeatherExtractorTest {
 
-    private final CsvWeatherExtractor extractor = new CsvWeatherExtractor();
+    private final CsvWeatherExtractor extractor = new CsvWeatherExtractor("test_data/weatherTest.csv");
 
     @Test
     void canExtractWeatherData() throws IOException, CsvException {
@@ -29,7 +29,6 @@ class CsvWeatherExtractorTest {
     }
 
     private WeatherData extractWeatherData() throws IOException, CsvException {
-        String defaultWeatherTestFile = "test_data/weatherTest.csv";
-        return extractor.extractWeatherData(defaultWeatherTestFile);
+        return extractor.extractWeatherData();
     }
 }
