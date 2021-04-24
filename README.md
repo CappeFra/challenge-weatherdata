@@ -1,6 +1,6 @@
 # WeatherData Challenge
 
-## Architectural consideration
+## Architectural considerations
 I'm not very familiar with best practices for the architecture of java projects. <br>
 What I would do in a .NET environment is I would create a solution with different projects, one for each architectural
 layer (e.g. UseCases, EnterpriseBusinessRules, Persistence, API, etc...) and only add each layer as reference
