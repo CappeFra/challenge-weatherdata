@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class WeatherBusinessLogic {
-    private WeatherData weatherData;
+    private final WeatherData weatherData;
 
     public WeatherBusinessLogic(WeatherData weatherData) {
         this.weatherData = weatherData;

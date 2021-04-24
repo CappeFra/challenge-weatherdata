@@ -11,8 +11,6 @@ import java.util.stream.Collectors;
 
 public class CsvWeatherExtractor extends CsvExtractor implements WeatherDataExtractor {
 
-    String filename;
-
     public CsvWeatherExtractor(String filename) {
         this.filename = filename;
     }

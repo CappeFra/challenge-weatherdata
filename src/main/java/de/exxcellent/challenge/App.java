@@ -1,5 +1,6 @@
 package de.exxcellent.challenge;
 
+import de.exxcellent.challenge.use_cases.FootballDataAnalysis;
 import de.exxcellent.challenge.use_cases.WeatherDataAnalysis;
 
 /**
@@ -21,7 +22,9 @@ public final class App {
         String dayWithSmallestTempSpread = "" + weatherDataAnalysisUseCase.getDayWithMinimumTemperatureSpread();
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
-        String teamWithSmallestGoalSpread = "A good team";
+        FootballDataAnalysis footballDataAnalysisUseCase = new FootballDataAnalysis();
+
+        String teamWithSmallestGoalSpread = footballDataAnalysisUseCase.getTeamWithMinimumGoalSpread();
         System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
     }
 }
