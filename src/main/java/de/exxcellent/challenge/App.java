@@ -19,7 +19,7 @@ public final class App {
 
         WeatherDataAnalysis weatherDataAnalysisUseCase = new WeatherDataAnalysis();
 
-        String dayWithSmallestTempSpread = "" + weatherDataAnalysisUseCase.getDayWithMinimumTemperatureSpread();
+        String dayWithSmallestTempSpread = weatherDataAnalysisUseCase.getDayWithMinimumTemperatureSpread();
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
         FootballDataAnalysis footballDataAnalysisUseCase = new FootballDataAnalysis();

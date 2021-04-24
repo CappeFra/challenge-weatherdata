@@ -32,6 +32,6 @@ class WeatherDataAnalysisTest {
     @Test
     void getDayWithMinimumSpreadTest() throws DataFormatException {
         WeatherDataAnalysis weatherDataAnalysis = new WeatherDataAnalysis("test_data/weatherTest.csv");
-        assertEquals(14, weatherDataAnalysis.getDayWithMinimumTemperatureSpread());
+        assertEquals("14", weatherDataAnalysis.getDayWithMinimumTemperatureSpread());
     }
 }

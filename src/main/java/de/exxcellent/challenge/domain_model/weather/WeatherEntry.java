@@ -3,20 +3,18 @@ package de.exxcellent.challenge.domain_model.weather;
 import de.exxcellent.challenge.domain_model.MinMaxEntry;
 
 public class WeatherEntry implements MinMaxEntry {
-    private final int day;
+    private final String day;
     private final double maxTemperature;
     private final double minTemperature;
-    private final double avgTemperature;
     // [...]
 
-    public WeatherEntry(int day, int maxTemperature, int minTemperature, int avgTemperature) {
+    public WeatherEntry(String day, int maxTemperature, int minTemperature) {
         this.day = day;
         this.maxTemperature = maxTemperature;
         this.minTemperature = minTemperature;
-        this.avgTemperature = avgTemperature;
     }
 
-    public int getDay() {
+    public String getDay() {
         return day;
     }
 
@@ -28,9 +26,6 @@ public class WeatherEntry implements MinMaxEntry {
         return minTemperature;
     }
 
-    public double getAvgTemperature() {
-        return avgTemperature;
-    }
 
     @Override
     public double calculateSpread() {

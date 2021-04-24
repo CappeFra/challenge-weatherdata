@@ -24,7 +24,7 @@ public class WeatherBusinessLogic {
 
     @SuppressWarnings("OptionalGetWithoutIsPresent")
     // suppressing this because calling getMinimumSpread makes sure that there will be at least one result
-    public int getDayWithMinimumTemperatureSpread() {
+    public String getDayWithMinimumTemperatureSpread() {
         double minimumSpread = getMinimumTemperatureSpread();
         return weatherData.entries.stream().filter(entry ->
             entry.calculateSpread() == minimumSpread

@@ -2,13 +2,13 @@ package de.exxcellent.challenge.use_cases;
 
 import java.util.zip.DataFormatException;
 
-class MinMaxDataAnalysis {
+class DataAnalysisUseCase {
     String filename;
     String fileType;
 
-    MinMaxDataAnalysis() {}
+    DataAnalysisUseCase() {}
 
-    MinMaxDataAnalysis(String filename) throws DataFormatException {
+    DataAnalysisUseCase(String filename) throws DataFormatException {
         int extensionIndex = filename.lastIndexOf('.');
         if (extensionIndex == -1) {
             this.filename = filename;

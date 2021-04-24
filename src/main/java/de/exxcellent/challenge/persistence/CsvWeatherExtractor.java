@@ -23,7 +23,6 @@ public class CsvWeatherExtractor extends CsvExtractor implements WeatherDataExtr
                 ArrayUtils.indexOf(entryMapping, "Day"),
                 ArrayUtils.indexOf(entryMapping, "MxT"),
                 ArrayUtils.indexOf(entryMapping, "MnT"),
-                ArrayUtils.indexOf(entryMapping, "AvT"),
         };
         dataRows.remove(0);
         List<WeatherEntry> weatherEntries = dataRows.stream().map(
@@ -37,10 +36,9 @@ public class CsvWeatherExtractor extends CsvExtractor implements WeatherDataExtr
     }
 
     private WeatherEntry mapDataRowToWeatherEntry(String[] row, int[] indexes) {
-        int day = Integer.parseInt(row[indexes[0]]);
+        String day = row[indexes[0]];
         int mxT = Integer.parseInt(row[indexes[1]]);
         int mnT = Integer.parseInt(row[indexes[2]]);
-        int avT = Integer.parseInt(row[indexes[3]]);
-        return new WeatherEntry(day, mxT, mnT, avT);
+        return new WeatherEntry(day, mxT, mnT);
     }
 }

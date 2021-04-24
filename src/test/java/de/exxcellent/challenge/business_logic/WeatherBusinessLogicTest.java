@@ -14,11 +14,11 @@ class WeatherBusinessLogicTest {
     @BeforeEach
     void setUp() {
         WeatherData weatherData = new WeatherData();
-        weatherData.entries.add(new WeatherEntry(1, 10, 5, 7)); // spread 5
-        weatherData.entries.add(new WeatherEntry(5, 30, 20, 24)); // spread 10
-        weatherData.entries.add(new WeatherEntry(3, 15, 8, 12)); // spread 7
-        weatherData.entries.add(new WeatherEntry(8, 12, 10, 11)); // spread 2
-        weatherData.entries.add(new WeatherEntry(17, 10, -4, 7)); // spread 14
+        weatherData.entries.add(new WeatherEntry("1", 10, 5)); // spread 5
+        weatherData.entries.add(new WeatherEntry("5", 30, 20)); // spread 10
+        weatherData.entries.add(new WeatherEntry("3", 15, 8)); // spread 7
+        weatherData.entries.add(new WeatherEntry("8", 12, 10)); // spread 2
+        weatherData.entries.add(new WeatherEntry("17", 10, -4)); // spread 14
 
         weatherBusinessLogic = new WeatherBusinessLogic(weatherData);
     }
@@ -30,6 +30,6 @@ class WeatherBusinessLogicTest {
 
     @Test
     void weatherBusinessLogicFindsDayWithMinimumSpread() {
-        assertEquals(8, weatherBusinessLogic.getDayWithMinimumTemperatureSpread());
+        assertEquals("8", weatherBusinessLogic.getDayWithMinimumTemperatureSpread());
     }
 }

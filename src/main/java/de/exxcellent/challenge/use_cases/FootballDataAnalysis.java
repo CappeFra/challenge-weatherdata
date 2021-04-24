@@ -9,7 +9,7 @@ import org.apache.commons.lang3.NotImplementedException;
 import java.io.IOException;
 import java.util.zip.DataFormatException;
 
-public class FootballDataAnalysis extends MinMaxDataAnalysis {
+public class FootballDataAnalysis extends DataAnalysisUseCase {
     public FootballDataAnalysis() {
         this.filename = "football";
         this.fileType = "csv";

@@ -24,7 +24,7 @@ class CsvWeatherExtractorTest {
         WeatherData weatherData = extractWeatherData();
 
         for (int i = 0; i < weatherData.entries.size(); i++) {
-            assertEquals(i + 1, weatherData.entries.get(i).getDay());
+            assertEquals("" + (i + 1), weatherData.entries.get(i).getDay());
         }
     }
 

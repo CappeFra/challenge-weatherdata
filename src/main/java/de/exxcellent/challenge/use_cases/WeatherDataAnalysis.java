@@ -9,7 +9,7 @@ import org.apache.commons.lang3.NotImplementedException;
 import java.io.IOException;
 import java.util.zip.DataFormatException;
 
-public class WeatherDataAnalysis extends MinMaxDataAnalysis{
+public class WeatherDataAnalysis extends DataAnalysisUseCase {
     public WeatherDataAnalysis() {
         this.filename = "weather";
         this.fileType = "csv";
@@ -19,7 +19,7 @@ public class WeatherDataAnalysis extends MinMaxDataAnalysis{
         super(filename);
     }
 
-    public int getDayWithMinimumTemperatureSpread() {
+    public String getDayWithMinimumTemperatureSpread() {
         try {
             String file = filename + "." + this.fileType;
             WeatherData weatherData = new WeatherData();
@@ -41,6 +41,6 @@ public class WeatherDataAnalysis extends MinMaxDataAnalysis{
         } catch (CsvException | IOException | DataFormatException e) {
             e.printStackTrace();
         }
-        return -1;
+        return "";
     }
 }
